@@ -101,14 +101,14 @@ const features: Feature[] = [
 
 export default function ProofSection({ logos, statistics }: ProofSectionProps) {
   return (
-    <section className="relative w-full -top-32 ">
+    <section className="relative w-full -top-32 h-max ">
       <div>
         <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
           {/* Company Logos Marquee */}
           <LogoMarquee logos={logos} />
 
           {/* Proof Section Content */}
-          <div className="px-8 md:px-16 py-16 max-w-7xl mx-auto">
+          <div className="px-8 md:px-16 py-16  max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Left Content */}
               <div className="space-y-6">
