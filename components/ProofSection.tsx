@@ -10,6 +10,16 @@ interface Feature {
   imageAlt: string;
 }
 
+interface TailoredSolution {
+  id: number;
+  title: string;
+  description: string;
+  imageSrc: string;
+  gradientFrom: string;
+  gradientTo: string;
+  textColor: string;
+}
+
 interface ProofSectionProps {
   logos: Logo[];
   statistics: Statistic[];
@@ -109,7 +119,7 @@ export default function ProofSection({ logos, statistics }: ProofSectionProps) {
 
                     {/* Content */}
                     <div className="space-y-6 wrap-balance w-[90%] lg:w-auto mx-auto">
-                      <h4 className="text-2xl lg:text-4xl font-semibold text-gray-900">
+                      <h4 className="text-2xl lg:text-3xl font-semibold text-gray-900">
                         {feature.title}
                       </h4>
                       
@@ -131,6 +141,90 @@ export default function ProofSection({ logos, statistics }: ProofSectionProps) {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tailored solutions section */}
+      <div className="bg-gray-900 py-20 px-8 md:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl lg:text-5xl font-extrabold text-white leading-tight font-heading mb-6 wrap-balance max-w-2xl m-auto w-[95%] md:w-auto">
+              Tailored solutions for your unique business
+            </h3>
+            <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              Whether you're an agency seeking improved results, a business owner scaling your marketing, or an enterprise wanting to expand your reach, Leadpages empowers you to succeed.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Marketing Teams Card */}
+            <div className="bg-gradient-to-br from-purple-900 to-pink-800 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-30">
+                <div 
+                  className="w-full h-full bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: 'url(/card-1.png)' }}
+                ></div>
+              </div>
+              <div className="relative z-10">
+                <h4 className="text-2xl font-bold mb-4">Marketing Teams</h4>
+                <p className="text-purple-100 mb-6 leading-relaxed">
+                  Create high-converting landing pages, pop-ups, and alert bars without the need for developers or engineers. Use an intuitive drag-and-drop solution to go from capture to execution in a matter of minutes.
+                </p>
+                <div className="h-40"></div>
+              </div>
+            </div>
+
+            {/* Agencies Card */}
+            <div className="bg-gradient-to-br from-blue-900 to-purple-800 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-30">
+                <div 
+                  className="w-full h-full bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: 'url(/card-2.png)' }}
+                ></div>
+              </div>
+              <div className="relative z-10">
+                <h4 className="text-2xl font-bold mb-4">Agencies</h4>
+                <p className="text-blue-100 mb-6 leading-relaxed">
+                  Scale your agency and maximize your performance with a results-focused solution. Launch pages faster than ever with collaborative tools and gather critical audience insights to share with your clients.
+                </p>
+                <div className="h-40"></div>
+              </div>
+            </div>
+
+            {/* Businesses Card */}
+            <div className="bg-gradient-to-br from-gray-900 to-purple-900 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-30">
+                <div 
+                  className="w-full h-full bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: 'url(/card-3.png)' }}
+                ></div>
+              </div>
+              <div className="relative z-10">
+                <h4 className="text-2xl font-bold mb-4">Businesses</h4>
+                <p className="text-gray-100 mb-6 leading-relaxed">
+                  Optimize your lead-collection strategy with powerful conversion tools, including AI assistants and custom forms. Build and launch pages quickly, then analyze the results and perform A/B tests to continually improve performance.
+                </p>
+                <div className="h-40"></div>
+              </div>
+            </div>
+
+            {/* Enterprise Card */}
+            <div className="bg-gradient-to-br from-indigo-900 to-purple-900 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="absolute inset-0 opacity-30">
+                <div 
+                  className="w-full h-full bg-cover bg-center bg-no-repeat"
+                  style={{ backgroundImage: 'url(/card-4.png)' }}
+                ></div>
+              </div>
+              <div className="relative z-10">
+                <h4 className="text-2xl font-bold mb-4">Enterprise</h4>
+                <p className="text-indigo-100 mb-6 leading-relaxed">
+                  Streamline your lead-capture launches and maximize your results with a robust lead optimization solution. Integrate your landing page and lead collection with email marketing platforms, CRMs, analytics tools, and more to enhance your entire tech stack.
+                </p>
+                <div className="h-40"></div>
               </div>
             </div>
           </div>
