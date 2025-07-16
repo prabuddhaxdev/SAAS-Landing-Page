@@ -351,7 +351,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
     </div>
   );
   
-  // Mobile Menu Component
+  
   const mobileMenu = (
     <div className={`fixed inset-0 bg-[#181625]/95 backdrop-blur-md z-[70] transform transition-all duration-300 ${
       isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
@@ -471,12 +471,12 @@ export default function Navbar({ scrollY }: NavbarProps) {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img src="/leadpages.png" alt="Leadpages" className={isScrolled ? "h-7 w-auto" : "h-8 w-auto"} />
-            <span className={`font-extrabold text-white tracking-tight font-heading ${isScrolled ? "text-lg" : "text-xl"}`}>Leadpages</span>
+            <span className={`font-extrabold text-white tracking-tight font-heading ${isScrolled ? "hidden" : "text-xl"}`}>Leadpages</span>
           </div>
           
           {/* Desktop Navigation */}
-          {!isScrolled && (
-            <div className="hidden md:flex items-center space-x-8">
+          {/* {!isScrolled && ( */}
+            <div className="hidden lg:flex items-center space-x-8">
               <div 
                 className="relative flex items-center space-x-1 text-white/90 hover:text-white cursor-pointer"
                 onMouseEnter={() => setActiveDropdown('platform')}
@@ -515,7 +515,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
               </div>
               <a href="#" className="text-white/90 hover:text-white font-semibold">Pricing</a>
             </div>
-          )}
+          {/* )} */}
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
@@ -547,7 +547,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
             {/* Mobile hamburger menu */}
             <button 
               onClick={() => setIsMobileMenuOpen(true)}
-              className="md:hidden text-white hover:text-lime-400 transition-colors p-2"
+              className="lg:hidden text-white hover:text-lime-400 transition-colors p-2"
             >
               <Menu className="h-6 w-6" />
             </button>
