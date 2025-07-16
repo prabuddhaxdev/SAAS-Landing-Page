@@ -49,7 +49,7 @@ const tailoredSolutions: TailoredSolution[] = [
 
 export default function TailoredSolutionsSection() {
   return (
-    <div className="bg-gray-900 py-20 px-8 md:px-16">
+    <div className=" pb-20 px-8 md:px-16 relative">
       <div className="max-w-7xl mx-auto">
         <section className="pinion pinion-textBlock mb-16">
           <div className="pinion-inner">
