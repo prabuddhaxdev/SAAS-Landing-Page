@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import { useScrollPosition, useScrollTransform } from "@/hooks/useScrollEffects";
 import { companyLogos, statistics } from "@/lib/data";
 import { useState, useEffect } from "react";
+import TailoredSolutionsSection from "@/components/TailoredSolutionsSection";
 
 export default function Home() {
   const scrollY = useScrollPosition();
@@ -54,6 +55,7 @@ export default function Home() {
         </div>
         
         <ProofSection logos={companyLogos} statistics={statistics} />
+        <TailoredSolutionsSection />
         <Footer />
       </div>            
     </div>

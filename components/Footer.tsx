@@ -1,242 +1,113 @@
-import { Facebook, Linkedin, Instagram, Youtube, Users } from "lucide-react";
+import Image from "next/image";
+import { Facebook, Linkedin, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative z-20 bg-gray-50 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+    <footer className="relative z-20 bg-white rounded-t-3xl">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
+        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Company Info & Logo */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-                <Users className="h-5 w-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Leadpages</span>
-            </div>
-            <address className="text-sm text-gray-600 not-italic leading-relaxed">
-              212 3rd Ave N, Ste 475<br />
-              Minneapolis MN, 55401-1479
+          <div className="space-y-8 xl:col-span-1">
+            <div className="flex items-center space-x-2">
+            <img src="/leadpages.png" alt="Leadpages" className={ "h-8 w-auto filter grayscale"} />
+            <span className={`font-extrabold text-gray-500 filter grayscale tracking-tight font-heading text-xl`}>Leadpages</span>
+          </div>
+            <address className="text-sm text-gray-500 not-italic leading-relaxed">
+              212 3rd Ave N, Ste 475
+              <br />
+              Minneapolis MN, 55401-1478
             </address>
           </div>
 
-          {/* Platform Section */}
-          <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
-              Platform
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Platform Overview
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Landing Page Templates
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Plans
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Comparisons
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources Section */}
-          <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
-              Resources
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Marketing Resources
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Landing Pages Guide
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Lead Generation Guide
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Optimization Guide
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Community & Support Section */}
-          <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
-              Community & Support
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Customer Stories
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Affiliate Program
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  System Status
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company Section */}
-          <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
-              Company
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Press
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-                  Contact Us
-                </a>
-              </li>
-            </ul>
+          {/* Links Grid */}
+          <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  Platform
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Platform Overview</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Landing Page Templates</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Plans</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Comparisons</a></li>
+                </ul>
+              </div>
+              <div className="mt-12 md:mt-0">
+                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  Resources
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Marketing Resources</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Blog</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Landing Pages Guide</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Lead Generation Guide</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Optimization Guide</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  Community & Support
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Help Center</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Customer Stories</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Affiliate Program</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">System Status</a></li>
+                </ul>
+              </div>
+              <div className="mt-12 md:mt-0">
+                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  Company
+                </h3>
+                <ul className="mt-4 space-y-3">
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">About</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Press</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Careers</a></li>
+                  <li><a href="#" className="text-sm text-gray-600 hover:text-gray-900">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
-            {/* Copyright & Legal */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0 text-sm text-gray-500">
-              <span>© 2025 Leadpages (US), Inc. All Rights Reserved.</span>
-              <div className="flex items-center space-x-4">
-                <a href="#" className="hover:text-gray-900 transition-colors">
-                  Privacy Policy
-                </a>
-                <span className="text-gray-300">|</span>
-                <a href="#" className="hover:text-gray-900 transition-colors">
-                  Legal
-                </a>
-              </div>
-            </div>
-
-            {/* Social Media Links */}
+        <div className="mt-12 pt-8 border-t border-gray-200 flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-4 sm:space-y-0">
+          <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-4 text-xs text-gray-500">
+            <span>© 2025 Leadpages (US), Inc. All Rights Reserved.</span>
             <div className="flex items-center space-x-4">
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Pinterest"
-              >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm0 19c-.721 0-1.418-.109-2.073-.312.286-.446.713-1.188.891-1.892l.652-2.507s.162.317.641.317c.841 0 1.411-.865 1.411-2.021 0-1.744-1.478-2.778-3.016-2.778-2.264 0-3.409 1.618-3.409 2.968 0 .817.308 1.376.967 1.376.26 0 .49-.107.628-.27.127-.149.19-.353.19-.577 0-.408-.206-.732-.61-.732-.18 0-.36.063-.495.178-.18-.953.564-1.68 1.653-1.68.88 0 1.393.573 1.393 1.347 0 1.018-.578 1.854-1.184 1.854-.386 0-.6-.317-.518-.707.098-.465.287-1.011.287-1.362 0-.314-.168-.576-.516-.576-.409 0-.739.423-.739.99 0 .361.122.606.122.606l-.49 2.078c-.15.636-.109 1.549-.039 2.048C6.16 21.37 2 17.175 2 12 2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/>
-                </svg>
-              </a>
-              <a 
-                href="#" 
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="X (Twitter)"
-              >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
+              <a href="#" className="hover:text-gray-900">Privacy Policy</a>
+              <span className="hidden sm:inline">|</span>
+              <a href="#" className="hover:text-gray-900">Legal</a>
             </div>
           </div>
+          <div className="flex items-center space-x-3">
+            {[Facebook, Linkedin, Instagram, Youtube].map((Icon, index) => (
+              <a key={index} href="#" className="text-gray-400 hover:text-gray-600 bg-gray-100 rounded-full p-2">
+                <Icon className="h-4 w-4" />
+              </a>
+            ))}
+            <a href="#" className="text-gray-400 hover:text-gray-600 bg-gray-100 rounded-full p-2">
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.245-1.021 1.584-6.702 1.584-6.702s-.398-.797-.398-1.974c0-1.845 1.08-3.228 2.434-3.228 1.148 0 1.702.861 1.702 1.891 0 1.148-.729 2.856-1.11 4.425-.322 1.33.664 2.405 1.96 2.405 2.347 0 4.145-2.487 4.145-6.127 0-3.22-2.29-5.495-5.247-5.495-3.566 0-5.644 2.668-5.644 5.224 0 1.011.381 1.686.826 1.686.373 0 .686-.46.596-.978-.139-.749-.42-1.556-.42-2.117 0-.868.51-1.686 1.561-1.686 1.248 0 2.234 1.264 2.234 2.931 0 1.743-1.138 3.14-2.713 3.14-.978 0-1.705-.782-1.482-1.835.242-1.12 1.021-2.53 1.021-3.441 0-1.614-1.1-2.886-2.934-2.886-2.295 0-3.893 2.223-3.893 4.546 0 1.48.522 2.535.522 2.535l-1.184 4.991c-.49 2.081.278 4.522.322 4.748C8.473 21.82 10.16 22 12 22c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-gray-600 bg-gray-100 rounded-full p-2">
+              <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
 
-          {/* Redrick Family Brands */}
-          <div className="mt-8 pt-6 border-t border-gray-200 text-center">
-            <p className="text-sm text-gray-500 mb-4">
-              Leadpages is part of the Redbrick family of brands.
-            </p>
-            
-            {/* Brand Logos */}
-            <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8">
-              <div className="flex items-center space-x-2 text-gray-600">
-                <span className="font-bold text-lg">Animoto</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <span className="font-bold text-lg">Delivra</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <span className="font-bold text-lg">Duplex</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <div className="w-6 h-6 bg-indigo-600 rounded flex items-center justify-center">
-                  <Users className="h-4 w-4 text-white" />
-                </div>
-                <span className="font-bold text-lg">Leadpages</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-600">
-                <span className="font-bold text-lg">Shift</span>
-              </div>
-            </div>
+
+        <div className="mt-16 pt-8 border-t border-gray-200 text-center">
+          <p className="text-sm text-gray-500 mb-6">
+            Leadpages is part of the Redbrick family of brands.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            <span className="font-bold text-xl text-gray-500 filter grayscale">Animoto</span>
+            <span className="font-bold text-xl text-gray-500 filter grayscale">Delivra</span>
+            <span className="font-bold text-xl text-gray-500 filter grayscale">Duplex</span>
+            <img src="/leadpages.png" alt="Leadpages" className={ "h-8 w-auto"} />
           </div>
         </div>
       </div>
