@@ -12,7 +12,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const platformDropdown = (
-    <div className="absolute top-full left-0 mt-2 w-[600px] bg-[#1a1827] border border-[#302e3c] rounded-2xl shadow-2xl p-6 z-50">
+    <div className="absolute top-full left-0 mt-2 w-max max-w-4xl bg-[#1a1827]/95 backdrop-blur-md border border-[#302e3c] rounded-2xl shadow-2xl p-6 z-[60]">
       <div className="grid grid-cols-2 gap-8">
         <div>
           <h3 className="text-white font-semibold text-sm uppercase tracking-wide mb-4">FEATURES</h3>
@@ -97,7 +97,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
                   <h4 className="text-white font-semibold">Lead Enrichment</h4>
                   <span className="bg-purple-600 text-white text-xs px-2 py-1 rounded-full">FEATURED</span>
                 </div>
-                <p className="text-white/70 text-sm">Enrich your leads with powerful data to tailor your campaigns</p>
+                <p className="text-white/70 text-sm">Enrich your leads with powerful data</p>
               </div>
               <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/5 cursor-pointer">
                 <Users className="h-5 w-5 text-white/70 mt-0.5" />
@@ -114,7 +114,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
   );
 
   const solutionsDropdown = (
-    <div className="absolute top-full left-0 mt-2 w-[500px] bg-[#1a1827] border border-[#302e3c] rounded-2xl shadow-2xl p-6 z-50">
+    <div className="absolute top-full left-0 mt-2 w-[500px] bg-[#1a1827]/95 backdrop-blur-md border border-[#302e3c] rounded-2xl shadow-2xl p-6 z-[60]">
       <h3 className="text-white font-semibold text-sm uppercase tracking-wide mb-4">USE CASES</h3>
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-3">
@@ -182,7 +182,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
   );
 
   const templatesDropdown = (
-    <div className="absolute top-full left-0 mt-2 w-[700px] bg-[#1a1827] border border-[#302e3c] rounded-2xl shadow-2xl p-6 z-50">
+    <div className="absolute top-full left-0 mt-2 w-[700px] bg-[#1a1827]/95 backdrop-blur-md border border-[#302e3c] rounded-2xl shadow-2xl p-6 z-[60]">
       <div className="grid grid-cols-2 gap-8">
         <div>
           <div className="mb-6">
@@ -242,7 +242,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
   );
 
   const resourcesDropdown = (
-    <div className="absolute top-full left-0 mt-2 w-[600px] bg-[#1a1827] border border-[#302e3c] rounded-2xl shadow-2xl p-6 z-50">
+    <div className="absolute top-full left-0 mt-2 w-[600px] bg-[#1a1827] border border-[#302e3c] rounded-2xl shadow-2xl p-6 z-[60]">
       <div className="grid grid-cols-2 gap-8">
         <div>
           <h3 className="text-white font-semibold text-sm uppercase tracking-wide mb-4">LEARN</h3>
@@ -337,9 +337,9 @@ export default function Navbar({ scrollY }: NavbarProps) {
     </div>
   );
   return (
-    <nav className={`flex items-center fixed transition-all duration-300 max-w-7xl ${
+    <nav className={`flex items-center fixed transition-all duration-300 max-w-7xl z-50 ${
       scrollY > 10
-        ? 'bg-[#181625]/95 backdrop-blur-md left-1/2 transform -translate-x-1/2 top-2 rounded-2xl px-6 py-3 w-[95%] shadow-2xl border border-[#302e3c] z-50 '
+        ? 'bg-[#181625]/95 backdrop-blur-md left-1/2 transform -translate-x-1/2 top-2 rounded-2xl px-6 py-3 w-[95%] shadow-2xl border border-[#302e3c]  '
         : 'bg-transparent w-full justify-between px-6 py-4  mx-auto top-0 left-0 right-0'
     }`}>
       <div className="flex items-center space-x-8">
@@ -350,7 +350,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
 
         <div className="hidden md:flex items-center space-x-8">
           <div 
-            className="relative flex items-center space-x-1 text-white/90 hover:text-white cursor-pointer"
+            className="relative flex  items-center space-x-1 text-white/90 hover:text-white cursor-pointer"
             onMouseEnter={() => setActiveDropdown('platform')}
             onMouseLeave={() => setActiveDropdown(null)}
           >
@@ -394,22 +394,15 @@ export default function Navbar({ scrollY }: NavbarProps) {
           Log In
         </Button>
         {scrollY > 10 ? (
-          <Button className="bg-lime-400 hover:bg-lime-500 text-black font-bold px-6 py-2 rounded-full border border-lime-300">
+          <Button className="bg-lime-400 hover:bg-lime-500 text-black font-bold px-4 py-3 rounded-xl border border-lime-300">
             Sign Up Free
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         ) : (
-          <a 
-            href="#" 
-            className="inline-flex items-center gap-3 px-4 py-3 rounded-xl border border-white/20 text-white hover:bg-white/10 transition-colors duration-200 group"
-          >
-            <span className="font-semibold">Sign Up Free</span>
-            <span className="relative flex items-center justify-center">
-              <svg className="stroke-current w-3 h-3" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.002 12h-16M15 17s5-3.682 5-5-5-5-5-5" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.646"></path>
-              </svg>
-            </span>
-          </a>
+          <Button className="bg-[#5c7039] hover:bg-lime-500 text-white font-bold px-4 py-3 rounded-xl border border-lime-300">
+            Sign Up Free
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
         )}
       </div>
     </nav>
