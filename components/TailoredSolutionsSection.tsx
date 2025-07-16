@@ -1,3 +1,5 @@
+import SmarterFeaturesSection from "./SmarterFeaturesSection";
+
 interface TailoredSolution {
   id: number;
   title: string;
@@ -91,6 +93,7 @@ export default function TailoredSolutionsSection() {
             </div>
           ))}
         </div>
+        <SmarterFeaturesSection />
       </div>
     </div>
   );
