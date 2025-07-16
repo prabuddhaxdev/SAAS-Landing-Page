@@ -23,7 +23,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/leadpages.png" />
       </head>
-      <body className={plusJakarta.className}>{children}</body>
+      <body className={plusJakarta.className} style={{ backgroundColor: '#111018' }}>{children}</body>
     </html>
   );
 }
