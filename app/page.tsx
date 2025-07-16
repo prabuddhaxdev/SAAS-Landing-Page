@@ -15,11 +15,12 @@ export default function Home() {
     <div className="relative">
       <div className="absolute inset-0 bg-gradient-to-b from-[#0f0e17] via-[#111018] to-[#111018]"></div>
       <div 
-        className="relative z-10"
+        className="relative"
         style={{
           backgroundImage: "url('https://www.leadpages.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbackground-gradient-image.051f7f86.png&w=828&q=75')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',  
         }}
       >
         <Navbar scrollY={scrollY} />

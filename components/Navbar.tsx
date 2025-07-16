@@ -9,10 +9,10 @@ interface NavbarProps {
 
 export default function Navbar({ scrollY }: NavbarProps) {
   return (
-    <nav className={`flex items-center fixed transition-all duration-300 z-50 ${
+    <nav className={`flex items-center fixed transition-all duration-300 max-w-7xl ${
       scrollY > 10
-        ? 'bg-[#181625]/95 backdrop-blur-md left-1/2 transform -translate-x-1/2 top-2 rounded-2xl px-6 py-3 w-[95%] shadow-2xl border border-[#302e3c]'
-        : 'bg-transparent w-full justify-between px-6 py-4 max-w-7xl mx-auto top-0 left-0 right-0'
+        ? 'bg-[#181625]/95 backdrop-blur-md left-1/2 transform -translate-x-1/2 top-2 rounded-2xl px-6 py-3 w-[95%] shadow-2xl border border-[#302e3c] z-50 '
+        : 'bg-transparent w-full justify-between px-6 py-4  mx-auto top-0 left-0 right-0'
     }`}>
       <div className="flex items-center space-x-8">
         <div className="flex items-center space-x-2">
