@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ArrowRight, HelpCircle, FileText, Gift, BarChart3, ShoppingCart, Globe, Users, Zap, CreditCard, Settings, Mail, Monitor, Trophy, Target, Megaphone, Share2, Search, MousePointer, TrendingUp, Menu, X } from "lucide-react";
+import { ChevronDown, ArrowRight, HelpCircle, FileText, Gift, BarChart3, ShoppingCart, Globe, Users, Zap, CreditCard, Settings, Mail, Monitor, Trophy, Target, Megaphone, Share2, Search, MousePointer, TrendingUp, Menu, X, ChartNoAxesGantt } from "lucide-react";
 import { useState } from "react";
 import React from "react";
 
@@ -549,7 +549,7 @@ export default function Navbar({ scrollY }: NavbarProps) {
               onClick={() => setIsMobileMenuOpen(true)}
               className="lg:hidden text-white hover:text-lime-400 transition-colors p-2"
             >
-              <Menu className="h-6 w-6" />
+              <ChartNoAxesGantt className="h-8 w-8" />
             </button>
           </div>
         </div>

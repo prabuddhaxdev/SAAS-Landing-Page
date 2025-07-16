@@ -3,8 +3,10 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="px-6 pt-40 max-w-4xl mx-auto text-center">
-      <div className="space-y-8">
+    <section className="relative px-6 pt-40 max-w-4xl mx-auto text-center overflow-hidden">
+      
+
+      <div className="relative z-10 space-y-8">
         <div className="space-y-6">
           <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight font-heading">
             Powerful Landing Pages
@@ -22,9 +24,9 @@ export default function HeroSection() {
           <input
             type="email"
             placeholder="Work email"
-            className="flex-1 px-4 py-3 h-12 rounded-lg bg-white/95 backdrop-blur-sm text-gray-900 placeholder-gray-500 border-0 focus:outline-none focus:ring-2 focus:ring-lime-400 font-medium"
+            className="flex-1 px-4 py-3 h-12 text-lg rounded-lg bg-white/95 backdrop-blur-sm text-gray-900 placeholder-gray-500 border-0 focus:outline-none focus:ring-2 focus:ring-lime-400 font-medium"
           />
-          <Button className="bg-lime-400 hover:bg-lime-500 text-black font-bold px-6 py-3 h-12 rounded-lg whitespace-nowrap border border-lime-300">
+          <Button className="bg-lime-400 text-lg hover:bg-lime-500 text-black font-bold px-6 py-3 h-12 rounded-lg whitespace-nowrap border border-lime-300">
             Start my trial
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
