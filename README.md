@@ -28,8 +28,7 @@ Go see for yourself the animations, scroll behavior, button hovers everything’
 
 * **Left Column → Original [leadpages.com](https://www.leadpages.com)**
 * **Right Column → My Clone**
-  🔗 [Live Clone Site](https://your-deployment-url.com)
-  💻 [Source Code on GitHub](https://github.com/your-username/leadpages-clone)
+  🔗 [Live Clone Site](https://leadpageslite.vercel.app/)
 
 </details>
 
