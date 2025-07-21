@@ -24,7 +24,7 @@ From **fonts, color palette, spacing, layout precision** to **animations and res
 Go see for yourself the animations, scroll behavior, button hovers everything’s been rebuilt pixel-for-pixel.
 
 <details>
-<summary><strong>Unveil the Answer</strong></summary>
+<summary><strong>Checkout</strong></summary>
 
 * **Left Column → Original [leadpages.com](https://www.leadpages.com)**
 * **Right Column → My Clone**
